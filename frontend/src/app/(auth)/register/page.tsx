@@ -53,6 +53,7 @@ export default function RegisterPage() {
       toast.success('Registration successful. Please check your email for login credentials.');
       router.push('/login');
     } catch (error) {
+      console.error('Registration error:', error);
       toast.error('Registration failed. Please try again.');
     } finally {
       setIsLoading(false);

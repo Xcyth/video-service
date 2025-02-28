@@ -92,6 +92,7 @@ export function VideoUpload({ onSuccess }: VideoUploadProps) {
       setFile(null);
       onSuccess();
     } catch (error) {
+      console.error('Error uploading video:', error);
       toast.error('Failed to upload video');
     } finally {
       setIsUploading(false);

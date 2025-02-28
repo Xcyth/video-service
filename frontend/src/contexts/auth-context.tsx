@@ -101,6 +101,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       });
       return response.data;
     } catch (error) {
+      console.error('Registration error:', error);
       throw new Error('Registration failed');
     }
   };

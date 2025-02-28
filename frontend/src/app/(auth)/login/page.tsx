@@ -48,6 +48,7 @@ export default function LoginPage() {
         window.location.href = '/';
       }
     } catch (error) {
+      console.error('Login error:', error);
       toast.error('Invalid credentials');
     } finally {
       setIsLoading(false);
@@ -111,7 +112,7 @@ export default function LoginPage() {
                 )}
               </Button>
               <div className="mt-4 text-center text-sm text-muted-foreground">
-                Don't have an account?{' '}
+                Don&apos;t have an account?{' '}
                 <Button variant="link" className="p-0" onClick={() => router.push('/register')}>
                   Sign up
                 </Button>

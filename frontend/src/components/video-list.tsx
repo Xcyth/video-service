@@ -81,6 +81,7 @@ export function VideoList({ userId, showAll = false, username }: VideoListProps)
       setVideos(prev => isNewSearch ? newVideos : [...prev, ...newVideos]);
       setHasMore(pagination.hasNextPage);
     } catch (error) {
+      console.error('Error fetching videos:', error);
       toast.error('Failed to load videos');
     } finally {
       setIsLoading(false);
